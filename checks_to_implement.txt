@@ -1,0 +1,6 @@
+1) Floating pragma - DONE
+2) different pragma directives
+2) non reentrancy
+3) unused declaration
+4) selfdestruct
+5) 
