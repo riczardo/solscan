@@ -6,7 +6,13 @@
 
 ## installation
 How to install the tool?
-First, you will need click python library. You can download it by:
+
+First, clone the repository into your local machine
+```
+git clone https://github.com/riczardo/solscan
+```
+
+Next, you will need click python library. You can download it by:
 ```
 pip install click
 ```
