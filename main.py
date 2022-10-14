@@ -4,6 +4,8 @@ from modules.parse_contract_util import parse_contract
 import re
 
 from modules.selfdestruct import selfdestruct
+from modules.re_entrancy import * 
+from modules.unchecked_external_call import * 
 
 @click.group
 def mycommands():
@@ -14,6 +16,8 @@ def mycommands():
 def scan_contract(contract):
     floating_pragma(contract)
     selfdestruct(contract)
+    reentrancy(contract)
+    unchecked_external_call(contract)
 
 mycommands.add_command(scan_contract)
 
