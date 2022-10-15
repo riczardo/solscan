@@ -9,5 +9,7 @@ def reentrancy(contract):
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.match, parsed_contract_into_list))
     if newlist:
+        i = 0
         for item in newlist:
-            print(f"Re-entrancy found at line {1+parsed_contract_into_list.index(newlist[0])}")
+            print(f"Re-entrancy found at line {1+parsed_contract_into_list.index(newlist[i])}")
+            i +=1

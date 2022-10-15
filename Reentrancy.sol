@@ -31,7 +31,7 @@ contract Reentrance {
     }   
 
     function withdrawBalance_fixed_2(){
-        // send() and transfer() are safe against
+        // send() and transfer() are safe against reentrancy
         // they do not transfer the remaining gas
         // and they give just enough gas to execute few instructions    
         // in the fallback function (no further call possible)
@@ -40,5 +40,3 @@ contract Reentrance {
     }   
    
 }
-
-a.Reentrancy(aa)
