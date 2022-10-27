@@ -7,6 +7,8 @@ from modules.selfdestruct import selfdestruct
 from modules.re_entrancy import * 
 from modules.unchecked_external_call import * 
 from modules.wrong_constructor_name import * 
+from modules.stored_credentialsTODO import * 
+from modules.insec_randomsourceTODO import * 
 
 @click.group()
 def mycommands():
@@ -19,7 +21,10 @@ def scan_contract(contract):
     #selfdestruct(contract)
     #reentrancy(contract)
     #unchecked_external_call(contract)
-    wrong_constructor_name(contract)
+    #wrong_constructor_name(contract)
+    #stored_credentials(contract)
+    randomsource(contract)
+
 
 mycommands.add_command(scan_contract)
 
