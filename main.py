@@ -10,6 +10,7 @@ from modules.wrong_constructor_name import *
 from modules.stored_credentialsTODO import * 
 from modules.insec_randomsourceTODO import * 
 from modules.tx_origin import * 
+from modules.assembly import * 
 
 @click.group()
 def mycommands():
@@ -25,7 +26,8 @@ def scan_contract(contract):
     #wrong_constructor_name(contract)
     #stored_credentials(contract)
     #randomsource(contract)
-    tx_origin(contract)
+    #tx_origin(contract)
+    assembly(contract)
 
 mycommands.add_command(scan_contract)
 
