@@ -9,6 +9,7 @@ from modules.unchecked_external_call import *
 from modules.wrong_constructor_name import * 
 from modules.stored_credentialsTODO import * 
 from modules.insec_randomsourceTODO import * 
+from modules.tx_origin import * 
 
 @click.group()
 def mycommands():
@@ -23,8 +24,8 @@ def scan_contract(contract):
     #unchecked_external_call(contract)
     #wrong_constructor_name(contract)
     #stored_credentials(contract)
-    randomsource(contract)
-
+    #randomsource(contract)
+    tx_origin(contract)
 
 mycommands.add_command(scan_contract)
 
