@@ -7,8 +7,8 @@ from modules.selfdestruct import selfdestruct
 from modules.re_entrancy import * 
 from modules.unchecked_external_call import * 
 from modules.wrong_constructor_name import * 
-from modules.stored_credentialsTODO import * 
-from modules.insec_randomsourceTODO import * 
+from modules.stored_credentials import * 
+from modules.insec_randomsource import * 
 from modules.tx_origin import * 
 from modules.assembly import * 
 
