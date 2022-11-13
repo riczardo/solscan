@@ -4,13 +4,14 @@ from modules.parse_contract_util import parse_contract
 import re
 
 from modules.selfdestruct import selfdestruct
-from modules.re_entrancy import * 
+from modules.re_entrancyTODO import * 
 from modules.unchecked_external_call import * 
 from modules.wrong_constructor_name import * 
 from modules.stored_credentialsTODO import * 
 from modules.insec_randomsourceTODO import * 
 from modules.tx_origin import * 
-from modules.assembly import * 
+from modules.assemblyTODO import * 
+from modules.ether_lock import *
 
 @click.group()
 def mycommands():
@@ -27,7 +28,8 @@ def scan_contract(contract):
     #stored_credentials(contract)
     #randomsource(contract)
     #tx_origin(contract)
-    assembly(contract)
+    #assembly(contract)
+    ether_lock(contract)
 
 mycommands.add_command(scan_contract)
 
