@@ -19,16 +19,3 @@ def stored_credentials(contract):
     for element in converted_passwds:
         formula = r'^(.*?(\b' + element + r'\b)[^$]*)$'
         print(parsed_contract_into_list)
-        #newlist = re.match(formula, line)
-        #print(newlist)
-    #print(formula)
-    #   r = re.compile(formula)
-    #    for i in parsed_contract_into_list:
-    #        newlist = list(filter(r.match, parsed_contract_into_list))
-        #print(newlist)
-    #    if newlist:
-    #        for item in newlist:
-    #            print(f"Are you sure these are not credentials in {1+parsed_contract_into_list.index(newlist[0])} ({element})?")
-        
-
- 
