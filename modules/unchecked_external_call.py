@@ -2,8 +2,7 @@ import click
 import re
 from modules.parse_contract_util import parse_contract
 
-# @click.command
-# @click.argument('contract', type=click.Path(exists=True), required=1)
+
 def unchecked_external_call(contract):
     r = re.compile('^.*\.send(.*)')
     parsed_contract_into_list = parse_contract(contract)

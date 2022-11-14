@@ -3,8 +3,7 @@ import re
 from modules.parse_contract_util import parse_contract
 import ntpath # solves problem off full path or test catalog issue
 
-# @click.command
-# @click.argument('contract', type=click.Path(exists=True), required=1)
+
 def stored_credentials(contract):
     parsed_contract_into_list = parse_contract(contract)
     y = open("10kpasswords.txt", 'r', encoding="utf-8")
