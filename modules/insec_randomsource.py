@@ -4,7 +4,7 @@ from modules.parse_contract_util import parse_contract
 
 def randomsource(contract):
     parsed_contract_into_list = parse_contract(contract)
-    r = re.compile('blockhash|block\.timestamp|block\.difficulty')
+    r = re.compile('^.*blockhash|block\.timestamp|block\.difficulty.*')
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.search, parsed_contract_into_list))
     if newlist:
