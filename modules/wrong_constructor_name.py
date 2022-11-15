@@ -3,8 +3,7 @@ import re
 from modules.utils.parse_contract_util import parse_contract
 import ntpath # solves problem off full path or test catalog issue
 
-# @click.command
-# @click.argument('contract', type=click.Path(exists=True), required=1)
+
 def wrong_constructor_name(contract):
     contract_name_with_extension = ntpath.basename(contract) # ./test/Reentrancy.sol -> Reentrancy.sol
     contract_name = contract_name_with_extension.split('.')[0] # Reentrancy.sol -> Reentrancy   
