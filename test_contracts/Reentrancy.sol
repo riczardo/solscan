@@ -35,7 +35,7 @@ contract Reentrance {
         // they do not transfer the remaining gas
         // and they give just enough gas to execute few instructions    
         // in the fallback function (no further call possible)
-        msg.sender.transfer(userBalance[msg.sender]);
+        msg.sender.transfer(userBalance[msg.sender]); 
         userBalance[msg.sender] = 0;
     }   
    

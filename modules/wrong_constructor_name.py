@@ -1,6 +1,6 @@
 import click
 import re
-from modules.parse_contract_util import parse_contract
+from modules.utils.parse_contract_util import parse_contract
 import ntpath # solves problem off full path or test catalog issue
 
 # @click.command
