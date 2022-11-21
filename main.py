@@ -15,7 +15,8 @@ from modules.delegate_call import *
 from modules.block_timestamp import *
 from modules.ether_lock import *
 from modules.delegate_call import *
-#from modules.utils.remove_comments import *
+from modules.utils.remove_comments import *
+from modules.integer_underflow_overflow import *
 
 @click.group()
 def mycommands():
@@ -37,6 +38,7 @@ def scan_contract(contract):
     delegate_call(contract)
     block_timestamp(contract)
     #sanitize(contract)
+    integer_underflow_overflow(contract)
     
 
 
