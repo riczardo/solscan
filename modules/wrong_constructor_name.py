@@ -7,7 +7,7 @@ import ntpath # solves problem off full path or test catalog issue
 def wrong_constructor_name(contract):
     contract_name_with_extension = ntpath.basename(contract) # ./test/Reentrancy.sol -> Reentrancy.sol
     contract_name = contract_name_with_extension.split('.')[0] # Reentrancy.sol -> Reentrancy   
-    print(contract_name)
+    #print(contract_name)
     r = re.compile('^.*{}\(.*\)'.format(contract_name), re.IGNORECASE)
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.match, parsed_contract_into_list))

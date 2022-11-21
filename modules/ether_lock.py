@@ -7,7 +7,7 @@ def ether_lock(contract):
     r = re.compile('^.*function.*payable.*')
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.match, parsed_contract_into_list))
-    print(newlist)
+    #print(newlist)
     if newlist:
         r2 = re.compile('\.transfer\(.*\)|\.call\(.*\)|\.send\(.*\)')
         withdrawal_functions = list(filter(r2.match, parsed_contract_into_list))

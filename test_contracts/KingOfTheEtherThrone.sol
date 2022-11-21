@@ -129,7 +129,7 @@ contract KingOfTheEtherThrone {
             msg.sender,
             name,
             valuePaid,
-            block.timestamp
+             block.timestamp
         );
 
         // Increase the claim fee for next time.

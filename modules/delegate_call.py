@@ -3,14 +3,8 @@ import click
 import re
 from modules.utils.parse_contract_util import parse_contract
 
-<<<<<<< HEAD
-# @click.command
-# @click.argument('contract', type=click.Path(exists=True), required=1)
-def delegate_call(contract):
-=======
 
-def selfdestruct(contract):
->>>>>>> 33503c7b455ee9440537d7d284e98e15563a1f70
+def delegate_call(contract):
     r = re.compile('^.*delegatecall(.*)|^.*callcode(.*)')
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.findall, parsed_contract_into_list))
