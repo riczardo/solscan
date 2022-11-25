@@ -5,7 +5,7 @@
 ## Features
 
 ## Installation
-# Prerequisites
+### Prerequisites
 First of all, you will need to have Python 3.7+ installed on your machine.
 Tool also uses `click`, `termcolor` and `re` python packages.
 
