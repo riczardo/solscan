@@ -16,6 +16,6 @@ def wrong_constructor_name(contract):
     #check if list is empty == not proper constructor name
 
     if not newlist:
-        print(f"A contract probably uses bad constructor name - \"{contract_name}()\" function is misssing")
+        print(f"A contract probably uses bad constructor name - \"{contract_name}()\" function is misssing\n")
 
 

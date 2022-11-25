@@ -1,22 +1,23 @@
 import click
 import re
 
-from modules.floating_pragma import *
-from modules.utils.parse_contract_util import parse_contract
-from modules.selfdestruct import selfdestruct
-from modules.re_entrancy import * 
-from modules.unchecked_external_call import * 
-from modules.wrong_constructor_name import * 
-#from modules.stored_credentials import * 
-from modules.insec_randomsource import * 
-from modules.tx_origin import * 
-from modules.assembly import * 
-from modules.delegate_call import *
-from modules.block_timestamp import *
-from modules.ether_lock import *
-from modules.delegate_call import *
-from modules.utils.remove_comments import *
-from modules.integer_underflow_overflow import *
+#from modules.floating_pragma import *
+#from modules.utils.parse_contract_util import parse_contract
+#from modules.selfdestruct import selfdestruct
+#from modules.re_entrancy import * 
+#from modules.unchecked_external_call import * 
+#from modules.wrong_constructor_name import * 
+##from modules.stored_credentials import * 
+#from modules.insec_randomsource import * 
+#from modules.tx_origin import * 
+#from modules.assembly import * 
+#from modules.delegate_call import *
+#from modules.block_timestamp import *
+#from modules.ether_lock import *
+#from modules.delegate_call import *
+#from modules.utils.remove_comments import *
+#from modules.integer_underflow_overflow import *
+from modules.rtlo import *
 
 @click.group()
 def mycommands():
@@ -25,20 +26,21 @@ def mycommands():
 @click.command()
 @click.argument('contract', type=click.Path(exists=True), required=1)
 def scan_contract(contract):
-    floating_pragma(contract)
-    selfdestruct(contract)
-    reentrancy(contract)
-    unchecked_external_call(contract)
-    wrong_constructor_name(contract)
+    #floating_pragma(contract)
+    #selfdestruct(contract)
+    #reentrancy(contract)
+    #unchecked_external_call(contract)
+    #wrong_constructor_name(contract)
     #stored_credentials(contract)
-    randomsource(contract)
-    tx_origin(contract)
-    assembly(contract)
-    ether_lock(contract)
-    delegate_call(contract)
-    block_timestamp(contract)
+    #randomsource(contract)
+    #tx_origin(contract)
+    #assembly(contract)
+    #ether_lock(contract)
+    #delegate_call(contract)
+    #block_timestamp(contract)
     #sanitize(contract)
-    integer_underflow_overflow(contract)
+    #integer_underflow_overflow(contract)
+    rtlo(contract)
     
 
 
