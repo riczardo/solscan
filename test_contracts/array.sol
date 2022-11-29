@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-contract Array {
+
+contract Array { 
     // Several ways to initialize an array
     uint[] public arr;
     uint[] public arr2 = [1, 2, 3];
