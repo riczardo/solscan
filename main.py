@@ -30,7 +30,7 @@ def mycommands():
 def scan_contract(contract):
     #floating_pragma(contract)
     #selfdestruct(contract)
-    #reentrancy(contract)
+    reentrancy(contract)
     #unchecked_external_call(contract)
     #wrong_constructor_name(contract)
     #stored_credentials(contract)
