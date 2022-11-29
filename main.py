@@ -19,6 +19,7 @@ from modules.utils.remove_comments import *
 from modules.integer_underflow_overflow import *
 from modules.rtlo import *
 from modules.multiple_constructors import *
+from modules.dynamic_array_length import *
 
 @click.group()
 def mycommands():
@@ -32,7 +33,7 @@ def scan_contract(contract):
     #reentrancy(contract)
     #unchecked_external_call(contract)
     #wrong_constructor_name(contract)
-    stored_credentials(contract)
+    #stored_credentials(contract)
     #randomsource(contract)
     #tx_origin(contract)
     #assembly(contract)
@@ -43,6 +44,7 @@ def scan_contract(contract):
     #integer_underflow_overflow(contract)
     #rtlo(contract)
     #multiple_constructors(contract)
+    dynamic_array_length(contract)
     
 
 
