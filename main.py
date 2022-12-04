@@ -38,7 +38,7 @@ def scan_contract(contract):
     #tx_origin(contract)
     #assembly(contract)
     #ether_lock(contract)
-    #delegate_call(contract)
+    delegate_call(contract)
     #block_timestamp(contract)
     #sanitize(contract)
     #integer_underflow_overflow(contract)
