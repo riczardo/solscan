@@ -1,3 +1,4 @@
+pragma solidity 0.8.0
 contract Wallet {
     address public owner;
 

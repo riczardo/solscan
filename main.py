@@ -35,7 +35,7 @@ def scan_contract(contract):
     wrong_constructor_name(contract)
     #stored_credentials(contract)
     #randomsource(contract)
-    #tx_origin(contract)
+    tx_origin(contract)
     assembly(contract)
     ether_lock(contract)
     delegate_call(contract)
