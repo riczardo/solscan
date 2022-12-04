@@ -29,5 +29,5 @@ for i in line_nums:
 ln = ', '.join(ln_b)
 #Usage:
 #printer_vuln(i, vulnerabilities_descriptions.example_vuln.vulnerability_name, example_vuln.vulnerability_description, example_vuln.vulnerability_more_info_links, example_vuln.vulnerability_recommendation, example_vuln.vulnerability__description_more_info_links)
-printer_vuln(4, 'reentrancy', 'it is vuln', 'fix it', ['aaa.pl', 'sdgsdfg.pl'])
-printer_vuln(ln, 'reentrancy', 'it is vuln', 'fix it', ['aaa.pl', 'sdgsdfg.pl'])
+#printer_vuln(4, 'reentrancy', 'it is vuln', 'fix it', ['aaa.pl', 'sdgsdfg.pl'])
+#printer_vuln(ln, 'reentrancy', 'it is vuln', 'fix it', ['aaa.pl', 'sdgsdfg.pl'])
