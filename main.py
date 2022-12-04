@@ -32,7 +32,7 @@ def scan_contract(contract):
     #selfdestruct(contract)
     reentrancy(contract)
     #unchecked_external_call(contract)
-    #wrong_constructor_name(contract)
+    wrong_constructor_name(contract)
     #stored_credentials(contract)
     #randomsource(contract)
     #tx_origin(contract)
