@@ -41,7 +41,7 @@ def scan_contract(contract):
     delegate_call(contract)
     #block_timestamp(contract)
     #sanitize(contract)
-    #integer_underflow_overflow(contract)
+    integer_underflow_overflow(contract)
     #rtlo(contract)
     #multiple_constructors(contract)
     #dynamic_array_length(contract)

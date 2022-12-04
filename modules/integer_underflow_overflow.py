@@ -2,7 +2,7 @@ import click
 import re
 from modules.utils.parse_contract_util import parse_contract
 from modules.utils.printer import *
-from vulnerabilities_descriptions.example import *
+from vulnerabilities_descriptions.integer_underflow_overflow_desc import *
 
 
 def integer_underflow_overflow(contract):
@@ -27,7 +27,7 @@ def integer_underflow_overflow(contract):
             pass
             #no vuln
         else:
-            print('Probably int overflow/underflow in contract. The defined pragma is below 0.8.* version and there is no use of safeMath library.')
+            printer_vuln_whole_contract(vulnerability_name, vulnerability_description, vulnerability_recommendation, more_info)
             
     #if newlist:
     #    print(f"integer found at line {1+parsed_contract_into_list.index(newlist[0])}")
