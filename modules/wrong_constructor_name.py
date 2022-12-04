@@ -13,11 +13,14 @@ def wrong_constructor_name(contract):
     r1 = re.compile('contract(.*?){', re.IGNORECASE)
     parsed_contract_into_list2 = parse_contract(contract)
     newlist2 = list(filter(r1.match, parsed_contract_into_list2))
-    contract_name_b = newlist2[0]
-    contract_name_b_2 = contract_name_b.split('{')
-    contract_name_b_3 = contract_name_b_2[0]
-    contract_name_b_4 = contract_name_b_3.split(' ')
-    contract_name = contract_name_b_4[1]
+    if newlist2:
+        contract_name_b = newlist2[0]
+        contract_name_b_2 = contract_name_b.split('{')
+        contract_name_b_3 = contract_name_b_2[0]
+        contract_name_b_4 = contract_name_b_3.split(' ')
+        contract_name = contract_name_b_4[1]
+    else:
+        return
     #print(contract_name)
     r = re.compile('^.*function {}\(.*\)'.format(contract_name), re.IGNORECASE)
     parsed_contract_into_list = parse_contract(contract)
@@ -30,5 +33,6 @@ def wrong_constructor_name(contract):
     if not newlist:
         #print(f"A contract probably uses bad constructor name - \"{contract_name}()\" function is misssing")
         printer_vuln_whole_contract(vulnerability_name, vulnerability_description, vulnerability_recommendation, more_info)
-
+    else:
+        pass
 

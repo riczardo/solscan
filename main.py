@@ -36,7 +36,7 @@ def scan_contract(contract):
     #stored_credentials(contract)
     #randomsource(contract)
     #tx_origin(contract)
-    #assembly(contract)
+    assembly(contract)
     ether_lock(contract)
     delegate_call(contract)
     #block_timestamp(contract)
