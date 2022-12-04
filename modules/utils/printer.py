@@ -20,13 +20,15 @@ def printer_vuln(line_num_arg, vuln_name_arg, vuln_description_arg, recommendati
         print("	* " + link)
     print("\n")
 
+
+#example printable line:
 #print line number in one line
-line_nums = [11, 15, 78]
-ln_b = []
-for i in line_nums:
-    x = str(i)
-    ln_b.append(x)
-ln = ', '.join(ln_b)
+#line_nums = [11, 15, 78]
+#ln_b = []
+#for i in line_nums:
+#    x = str(i)
+#    ln_b.append(x)
+#ln = ', '.join(ln_b)
 #Usage:
 #printer_vuln(i, vulnerabilities_descriptions.example_vuln.vulnerability_name, example_vuln.vulnerability_description, example_vuln.vulnerability_more_info_links, example_vuln.vulnerability_recommendation, example_vuln.vulnerability__description_more_info_links)
 #printer_vuln(4, 'reentrancy', 'it is vuln', 'fix it', ['aaa.pl', 'sdgsdfg.pl'])
