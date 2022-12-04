@@ -3,7 +3,7 @@ import re
 from modules.utils.parse_contract_util import parse_contract
 import ntpath # solves problem off full path or test catalog issue
 from modules.utils.printer import *
-from vulnerabilities_descriptions.wrong_constructor_name import *
+from vulnerabilities_descriptions.wrong_constructor_name_desc import *
 
 
 def wrong_constructor_name(contract):
