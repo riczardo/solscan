@@ -29,7 +29,7 @@ def mycommands():
 @click.argument('contract', type=click.Path(exists=True), required=1)
 def scan_contract(contract):
     floating_pragma(contract)
-    #selfdestruct(contract)
+    selfdestruct(contract)
     reentrancy(contract)
     #unchecked_external_call(contract)
     wrong_constructor_name(contract)
