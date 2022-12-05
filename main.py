@@ -38,7 +38,7 @@ def update_bar(progress_bar_iterator):
 @click.command('scan', help="scan contract")
 @click.argument('contract', type=click.Path(exists=True), required=1)
 def scan_contract(contract):  
-    print_banner()  
+    print_banner(contract)  
     with click.progressbar(length=17, label="Running checks") as bar:
         print("\n")
         for i in range(16):
