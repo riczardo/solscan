@@ -25,6 +25,7 @@ from modules.multiple_constructors import *
 from modules.dynamic_array_length import *
 from modules.utils.banner import *
 from modules.looped_calls import *
+from modules.hash_colission import *
 
 @click.group()
 def mycommands():
@@ -159,6 +160,12 @@ def scan_contract(contract):
             looped_calls(contract)
         except:
             print("An error occured while checking looped calls. This vulnerability class was NOT checked.")
+
+        try:
+        
+            hash_colission(contract)
+        except:
+            print("An error occured while checking hash collision. This vulnerability class was NOT checked.")
         
         click.echo("Scan completed. See results above.")
     
