@@ -24,6 +24,7 @@ from modules.rtlo import *
 from modules.multiple_constructors import *
 from modules.dynamic_array_length import *
 from modules.utils.banner import *
+from modules.looped_calls import *
 
 @click.group()
 def mycommands():
@@ -41,11 +42,13 @@ def scan_contract(contract):
     with click.progressbar(length=17, label="Running checks") as bar:
         print("\n")
         for i in range(16):
-            update_bar(bar)
+            pass
+            #update_bar(bar)
         print('''======================================
         RESULTS
         ====================================
         ''')
+        
         try:
             floating_pragma(contract)
             #update_bar(bar)
@@ -150,7 +153,13 @@ def scan_contract(contract):
             #update_bar(bar)
         except:
             print("An error occured while checking dynamic array length. This vulnerability class was NOT checked.")
-
+        
+        try:
+        
+            looped_calls(contract)
+        except:
+            print("An error occured while checking looped calls. This vulnerability class was NOT checked.")
+        
         click.echo("Scan completed. See results above.")
     
 

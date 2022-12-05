@@ -8,9 +8,9 @@ def print_banner():
 
 Tool is avaliable under MIT license.
 Authors:
-    @riczardo
-    @BartekM101
-    @florkie
+@riczardo
+@BartekM101
+@florkie
 
 
     ''')
