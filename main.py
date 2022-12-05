@@ -34,7 +34,7 @@ def scan_contract(contract):
     reentrancy(contract)
     unchecked_external_call(contract)
     wrong_constructor_name(contract)
-    #stored_credentials(contract)
+    stored_credentials(contract) #now
     #randomsource(contract)
     tx_origin(contract)
     assembly(contract)
