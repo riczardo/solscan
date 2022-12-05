@@ -81,7 +81,7 @@ def scan_contract(contract):
 
         try:
             pass
-            #stored_credentials(contract)
+            stored_credentials(contract)
             #update_bar(bar)
         except:
             print("An error occured while checking stored credentials. This vulnerability class was NOT checked.")
@@ -149,7 +149,7 @@ def scan_contract(contract):
 
         try:
             pass
-            #dynamic_array_length(contract)
+            dynamic_array_length(contract)
             #update_bar(bar)
         except:
             print("An error occured while checking dynamic array length. This vulnerability class was NOT checked.")
