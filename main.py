@@ -20,6 +20,7 @@ from modules.integer_underflow_overflow import *
 from modules.rtlo import *
 from modules.multiple_constructors import *
 from modules.dynamic_array_length import *
+from modules.arbitraryfrom import *
 
 @click.group()
 def mycommands():
@@ -45,6 +46,7 @@ def scan_contract(contract):
     #rtlo(contract)
     #multiple_constructors(contract)
     #dynamic_array_length(contract)
+    #arbitraryfrom(contract)
     
 
 
