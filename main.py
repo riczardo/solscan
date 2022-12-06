@@ -89,7 +89,7 @@ def scan_contract(contract):
 
         try:
             pass
-            #randomsource(contract)
+            randomsource(contract)
             #update_bar(bar)
         except:
             print("An error occured while checking random source. This vulnerability class was NOT checked.")
