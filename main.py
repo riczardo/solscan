@@ -81,8 +81,7 @@ def scan_contract(contract):
             print("An error occured while checking wrong constructor name. This vulnerability class was NOT checked.")
 
         try:
-            pass
-            #stored_credentials(contract) # TO FIX
+            stored_credentials(contract) # TO FIX
             #update_bar(bar)
         except:
             print("An error occured while checking stored credentials. This vulnerability class was NOT checked.")
