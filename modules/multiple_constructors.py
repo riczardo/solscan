@@ -2,7 +2,7 @@ import click
 import re
 from modules.utils.parse_contract_util import parse_contract
 from modules.utils.printer import *
-from vulnerabilities_descriptions.example import *
+from vulnerabilities_descriptions.multiplecons_desc import *
 
 
 def multiple_constructors(contract):
@@ -33,9 +33,11 @@ def multiple_constructors(contract):
         newlist_constructor = list(filter(r_constructor.match, parsed_contract_into_list_constructor))
         #print(newlist_constructor)
         if newlist_constructor:
-            print(f"Only constructor is in use - valid.")
+            pass
+            #print(f"Only constructor is in use - valid.")
         else:
-            print('There is no constructor at all - valid')
+            pass
+            #print('There is no constructor at all - valid')
     else:
         #check if there is constructor() in use because if it is it is vulnerability
         r_constructor = re.compile('.*constructor().*', re.IGNORECASE)
@@ -43,8 +45,10 @@ def multiple_constructors(contract):
         newlist_constructor = list(filter(r_constructor.match, parsed_contract_into_list_constructor))
         #print(newlist_constructor)
         if newlist_constructor:
-            print(f"Detect multiple constructor definitions in the same contract (using new and old schemes).")
+            #print(f"Detect multiple constructor definitions in the same contract (using new and old schemes).")
+            printer_vuln_whole_contract(vulnerability_name, vulnerability_description, vulnerability_recommendation, more_info)
         else:
+            pass
             print('There is only constructor in old style - valid')
         
               

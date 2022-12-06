@@ -82,7 +82,7 @@ def scan_contract(contract):
 
         try:
             pass
-            stored_credentials(contract)
+            #stored_credentials(contract) # TO FIX
             #update_bar(bar)
         except:
             print("An error occured while checking stored credentials. This vulnerability class was NOT checked.")
@@ -143,7 +143,7 @@ def scan_contract(contract):
 
         try:
             pass
-            #multiple_constructors(contract)
+            multiple_constructors(contract)
             #update_bar(bar)
         except:
             print("An error occured while checking multiple constructors. This vulnerability class was NOT checked.")
