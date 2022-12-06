@@ -136,7 +136,7 @@ def scan_contract(contract):
 
         try:
             pass
-            #rtlo(contract)
+            rtlo(contract)
             #update_bar(bar)
         except:
             print("An error occured while checking RTLO. This vulnerability class was NOT checked.")
