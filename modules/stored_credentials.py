@@ -27,7 +27,7 @@ def stored_credentials(contract):
         #make newlist printable 
     newlist_to_print = []
         #=====
-    print(len(newlist))
+    #print(len(newlist))
     if newlist:
         for i in range(len(newlist)):
             line_number = 1+parsed_contract_into_list.index(newlist[i]) #line number
