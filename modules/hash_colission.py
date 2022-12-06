@@ -2,7 +2,7 @@ import click
 import re
 from modules.utils.parse_contract_util import parse_contract
 from modules.utils.printer import *
-from vulnerabilities_descriptions.example import *
+from vulnerabilities_descriptions.hashcol_desc import *
 
 
 def hash_colission(contract):
