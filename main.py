@@ -44,7 +44,8 @@ def scan_contract(contract):
     with click.progressbar(length=17, label="Running checks") as bar:
         print("\n")
         for i in range(16):
-            update_bar(bar)
+            pass
+            #update_bar(bar)
         print('''
 ======================================
               RESULTS
