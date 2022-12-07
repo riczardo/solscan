@@ -1,13 +1,11 @@
-#from modules.utils.parse_contract_util import parse_contract
 import re
 
 def sanitize(contract):
-    contract_without_multiline_comments = remove_multiline_comments(contract)
+    contract_without_multiline_comments = remove_multiline_comments(contract) #put contract into multiline function
 
-    contract_without_any_comments = remove_oneline_comments(contract_without_multiline_comments)
+    contract_without_any_comments = remove_oneline_comments(contract_without_multiline_comments) #put partialy sanitized contract through next function
     return contract_without_any_comments
-    #parsed_contract_into_list = parse_contract(contract_without_any_comments)
-    #print(parsed_contract_into_list)
+
 
 
 

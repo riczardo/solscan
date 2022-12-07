@@ -3,6 +3,7 @@ import re
 import time
 import random
 import pyfiglet
+import os
 
 from modules.floating_pragma import *
 from modules.utils.parse_contract_util import parse_contract
@@ -44,9 +45,10 @@ def scan_contract(contract):
         print("\n")
         for i in range(16):
             update_bar(bar)
-        print('''======================================
-        RESULTS
-        ====================================
+        print('''
+======================================
+              RESULTS
+======================================
         ''')
         
         try:
@@ -166,9 +168,7 @@ def scan_contract(contract):
             print("An error occured while checking hash collision. This vulnerability class was NOT checked.")
         
         click.echo("Scan completed. See results above.")
-    #parse_contract(contract)
-    #remove_multiline_comment(contract)
-    #remove_oneline_comments(contract)
+
 
 
 mycommands.add_command(scan_contract)
