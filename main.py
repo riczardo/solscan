@@ -43,8 +43,7 @@ def scan_contract(contract):
     with click.progressbar(length=17, label="Running checks") as bar:
         print("\n")
         for i in range(16):
-            pass
-            #update_bar(bar)
+            update_bar(bar)
         print('''======================================
         RESULTS
         ====================================
@@ -167,7 +166,9 @@ def scan_contract(contract):
             print("An error occured while checking hash collision. This vulnerability class was NOT checked.")
         
         click.echo("Scan completed. See results above.")
-    
+    #parse_contract(contract)
+    #remove_multiline_comment(contract)
+    #remove_oneline_comments(contract)
 
 
 mycommands.add_command(scan_contract)
