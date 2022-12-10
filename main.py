@@ -27,6 +27,8 @@ from modules.dynamic_array_length import *
 from modules.utils.banner import *
 from modules.looped_calls import *
 from modules.hash_colission import *
+from modules.functions_default_visibility import *
+from modules.assert_violation import *
 
 @click.group()
 def mycommands():
@@ -167,6 +169,18 @@ def scan_contract(contract):
             hash_colission(contract)
         except:
             print("An error occured while checking hash collision. This vulnerability class was NOT checked.")
+
+        try:
+        
+            function_default_visibility(contract)
+        except:
+            print("An error occured while checking function default visibility. This vulnerability class was NOT checked.")
+
+        try:
+        
+            assert_violation(contract)
+        except:
+            print("An error occured while checking assert violation. This vulnerability class was NOT checked.")
         
         click.echo("Scan completed. See results above.")
 
