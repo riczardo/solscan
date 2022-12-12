@@ -11,8 +11,16 @@ def wrong_constructor_name(contract):
     #contract_name = contract_name_with_extension.split('.')[0] # Reentrancy.sol -> Reentrancy   
     #
     r1 = re.compile('contract(.*?){', re.IGNORECASE)
+    r3 = re.compile('.*constructor(.*).*', re.IGNORECASE)
     parsed_contract_into_list2 = parse_contract(contract)
+    parsed_contract_into_list3 = parse_contract(contract)
     newlist2 = list(filter(r1.match, parsed_contract_into_list2))
+    newlist3 = list(filter(r3.match, parsed_contract_into_list3))
+    #print(newlist3)
+    if newlist3:
+        return
+    else:
+        pass
     if newlist2:
         contract_name_b = newlist2[0]
         contract_name_b_2 = contract_name_b.split('{')
