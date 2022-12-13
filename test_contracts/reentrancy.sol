@@ -26,7 +26,7 @@ contract Reentrance {
         uint amount = userBalance[msg.sender];
         userBalance[msg.sender] = 0;
         if( ! (msg.sender.call.value(amount)() ) ){
-            throw;
+        throw;
         }
     }   
 

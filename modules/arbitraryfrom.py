@@ -11,6 +11,7 @@ def arbitraryfrom(contract):
     stripped = [s.strip() for s in newlist]
     r2 = re.compile('^.*transferFrom\(msg\.sender.*\).*')
     newlist2 = list(filter(r2.match, stripped))
+    newlist_to_print = []
     if not newlist2:
         for i in range(len(newlist)):
             line_number = 1+parsed_contract_into_list.index(newlist[i]) #line number
