@@ -29,6 +29,7 @@ from modules.looped_calls import *
 from modules.hash_colission import *
 from modules.functions_default_visibility import *
 from modules.assert_violation import *
+from modules.arbitraryfrom import *
 
 @click.group()
 def mycommands():
@@ -71,6 +72,12 @@ def scan_contract(contract):
             #update_bar(bar)
         except:
             print("An error occured while checking reentrancy. This vulnerability class was NOT checked.")
+
+        try:
+            arbitraryfrom(contract)
+            #update_bar(bar)
+        except:
+            print("An error occured while checking arbitraryfrom. This vulnerability class was NOT checked.")
 
         try:
             unchecked_external_call(contract)

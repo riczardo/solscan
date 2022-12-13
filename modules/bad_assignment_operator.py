@@ -2,7 +2,7 @@ from hashlib import new
 import click
 import re
 from modules.utils.parse_contract_util import parse_contract
-
+from vulnerabilities_descriptions.bad_assignment_desc import *
 
 def bad_assignment_operator(contract):
     r = re.compile('^.*(\=\+|\=\-|\=\\|\=\*).*')
@@ -11,4 +11,9 @@ def bad_assignment_operator(contract):
 
     if newlist:
         for i in range(len(newlist)):
-            print(f"Unary typo found at lines {1+parsed_contract_into_list.index(newlist[i])}. Given value will not update when executed. Implement unary expression properly.")
+            line_number = 1+parsed_contract_into_list.index(newlist[i]) #line number
+            line_number_as_str = str(line_number) #line number to string
+            newlist_to_print.append(line_number_as_str) #new list without []
+        newlist_printable = ', '.join(newlist_to_print) #new list without []
+        #Use printer
+        printer_vuln(newlist_printable, vulnerability_name, vulnerability_description, vulnerability_recommendation, more_info)
