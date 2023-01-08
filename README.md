@@ -5,7 +5,7 @@ Solscan is a static Solidity vulnerabilities scanner written in Python. It works
 
 
 ## Features
-* Support of 30 vulnerabilities
+* Support of 28 vulnerabilities
 * Static scan of your code meaning no need to have compiler
 * Works on all Solidity versions
 
