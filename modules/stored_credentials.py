@@ -19,15 +19,10 @@ def stored_credentials(contract):
         formula = r'^(.*?(\b' + element + r'\b)[^$]*)$'
         r = re.compile(formula)
         newlist += list(filter(r.match, parsed_contract_into_list))
-    #print(newlist)
-    #if newlist: 
-    #    for i in range(len(newlist)):
-    #        print("Be sure to check you are not storing credentials in the contract in line:")
-    #        print(f"{1+parsed_contract_into_list.index(newlist[i])}" + " - " + newlist[i])
-        #make newlist printable 
+
     newlist_to_print = []
         #=====
-    #print(len(newlist))
+
     if newlist:
         for i in range(len(newlist)):
             line_number = 1+parsed_contract_into_list.index(newlist[i]) #line number

@@ -1,5 +1,5 @@
 from termcolor import colored, cprint
-#from modules.vulnerabilities_descriptions import *
+
 
 
 

@@ -6,7 +6,7 @@ from vulnerabilities_descriptions.assertviol_desc import *
 
 
 def assert_violation(contract):
-    r = re.compile('^.*assert\(.*\).*') # teraz nie sprawdza czy np. address[3] calldata admins, czaddress[] calldata admins, bo jak [] to jest vuln
+    r = re.compile('^.*assert\(.*\).*') 
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.match, parsed_contract_into_list))
     #make newlist printable 

@@ -18,16 +18,13 @@ def integer_underflow_overflow(contract):
     if int(version[2]) >= 8:
         pass
     else:
-        #print('check smartmath in use')
         r2 = re.compile('.*using SafeMath for.*')
         newlist2 = list(filter(r2.match, parsed_contract_into_list))
         #check if list is empty
-        #print(newlist2)
+
         if newlist2:
             pass
-            #no vuln
         else:
             printer_vuln_whole_contract(vulnerability_name, vulnerability_description, vulnerability_recommendation, more_info)
             
-    #if newlist:
-    #    print(f"integer found at line {1+parsed_contract_into_list.index(newlist[0])}")
+

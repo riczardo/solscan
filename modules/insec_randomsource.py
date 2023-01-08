@@ -8,9 +8,7 @@ def randomsource(contract):
     r = re.compile('^.*blockhash.*|^.*block\.timestamp.*|^.*block\.difficulty.*')
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.search, parsed_contract_into_list))
-    #if newlist:
-    #    for i in range(len(newlist)):
-    #        print(f"Are you sure these functions aren't used as randomness source at line {1+parsed_contract_into_list.index(newlist[i])}?")
+
     #make newlist printable 
     newlist_to_print = []
     #=====

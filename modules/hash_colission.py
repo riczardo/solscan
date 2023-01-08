@@ -6,7 +6,7 @@ from vulnerabilities_descriptions.hashcol_desc import *
 
 
 def hash_colission(contract):
-    r = re.compile('^.*abi\.encodePacked\(.*,.*\).*') # teraz nie sprawdza czy np. address[3] calldata admins, czaddress[] calldata admins, bo jak [] to jest vuln
+    r = re.compile('^.*abi\.encodePacked\(.*,.*\).*') 
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.match, parsed_contract_into_list))
     #make newlist printable 

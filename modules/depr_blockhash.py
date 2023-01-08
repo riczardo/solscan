@@ -9,14 +9,9 @@ def blockhash(contract):
     r = re.compile('^.*block\.blockhash.*')
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.match, parsed_contract_into_list))
-    #if newlist:
-    #    for i in range(len(newlist)):
-    #        print(f"Do not use tx.origin for authentication purposes in line {1+parsed_contract_into_list.index(newlist[i])}, use msg.sender instead")
-    #make newlist printable 
-    #
+
     newlist_to_print = []
-    #=====
-    #https://docs.soliditylang.org/en/v0.4.25/miscellaneous.html#global-variables
+
     if newlist:
         for i in range(len(newlist)):
             line_number = 1+parsed_contract_into_list.index(newlist[i]) #line number

@@ -4,8 +4,7 @@ import re
 from modules.utils.parse_contract_util import parse_contract
 from vulnerabilities_descriptions.multidigit_desc import *
 
-# @click.command
-# @click.argument('contract', type=click.Path(exists=True), required=1)
+
 def block_timestamp(contract):
     r = re.compile('^.*\d{7,}.*')
     parsed_contract_into_list = parse_contract(contract)

@@ -9,11 +9,7 @@ def callcode(contract):
     r = re.compile('^.*callcode.*')
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.match, parsed_contract_into_list))
-    #if newlist:
-    #    for i in range(len(newlist)):
-    #        print(f"Do not use tx.origin for authentication purposes in line {1+parsed_contract_into_list.index(newlist[i])}, use msg.sender instead")
-    #make newlist printable 
-    #https://docs.soliditylang.org/en/v0.8.17/050-breaking-changes.html
+
     newlist_to_print = []
     #=====
     if newlist:

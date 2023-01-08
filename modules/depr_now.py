@@ -1,4 +1,3 @@
-#https://docs.soliditylang.org/en/v0.8.15/070-breaking-changes.html
 import click
 import re
 from modules.utils.parse_contract_util import parse_contract
@@ -10,13 +9,10 @@ def now(contract):
     r = re.compile('^.*now.*')
     parsed_contract_into_list = parse_contract(contract)
     newlist = list(filter(r.match, parsed_contract_into_list))
-    #if newlist:
-    #    for i in range(len(newlist)):
-    #        print(f"Do not use tx.origin for authentication purposes in line {1+parsed_contract_into_list.index(newlist[i])}, use msg.sender instead")
-    #make newlist printable 
+ 
     #
     newlist_to_print = []
-    #=====
+
     if newlist:
         for i in range(len(newlist)):
             line_number = 1+parsed_contract_into_list.index(newlist[i]) #line number

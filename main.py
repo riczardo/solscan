@@ -48,7 +48,7 @@ def mycommands():
 def update_bar(progress_bar_iterator):
     progress_bar_iterator.update(1)
     print("\n")
-    time.sleep(random.uniform(0.2,0.3))
+    time.sleep(0.1)
 
 @click.command('scan', help="scan contract")
 @click.argument('contract', type=click.Path(exists=True), required=1)
@@ -95,7 +95,7 @@ def scan_contract(contract):
             print("An error occured while checking delegate call. This vulnerability class was NOT checked.")
 
         try:
-            blockhash(contract) # TO FIX
+            blockhash(contract)
         except:
             print("An error occured while checking blockhash. This vulnerability class was NOT checked.")
 
@@ -140,8 +140,7 @@ def scan_contract(contract):
             print("An error occured while checking floating pragma. This vulnerability class was NOT checked.")
 
         try:
-            pass
-            #function_default_visibility(contract)
+            function_default_visibility(contract)
         except:
             print("An error occured while checking function default visibility. This vulnerability class was NOT checked.")
 
