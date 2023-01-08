@@ -47,7 +47,7 @@ python3 main.py scan-contract /path/to/your/contract.sol
 After the scan is completed, you will get the results and corresponding recommendations.
 ## Detectors
 
-Solscan gives you the ability to scan your smart contract code to find some underlying vulnerabilities.
+Solscan gives you the ability to scan your smart contract code to find some underlying vulnerabilities listed below:
 | ID | VULNERABILITY                |
 |----|------------------------------|
 | 1  | ArbitraryFrom                |
