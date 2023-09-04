@@ -16,7 +16,7 @@ from modules.insec_randomsource import *
 from modules.tx_origin import * 
 from modules.assembly import * 
 from modules.delegate_call import *
-from modules.block_timestamp import *
+#from modules.block_timestamp import *
 from modules.ether_lock import *
 from modules.delegate_call import *
 from modules.utils.remove_comments import *
