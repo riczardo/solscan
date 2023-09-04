@@ -42,7 +42,7 @@ After that you should be good to go.
 ## Usage
 To use the tool, go to the solscan directory, then use following command:
 ```
-python3 main.py scan-contract /path/to/your/contract.sol
+python3 main.py scan /path/to/your/contract.sol
 ```
 After the scan is completed, you will get the results and corresponding recommendations.
 ## Detectors
