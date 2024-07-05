@@ -21,22 +21,11 @@ First, clone the repository into your local machine:
 git clone https://github.com/riczardo/solscan
 ```
 
-Next, you will need click python library. You can download it by:
+Next, install all the project dependencies:
 ```
-pip install click
+pip install -r requirements.txt
 ```
-If you encounter any problem with the library, you can try to install it into folder containg the tool.
 
-```
-pip install --target=/path/to/the/tool click
-```
-Same goes to the rest of the libraries. Install termcolor and pyfiglet library:
-```
-pip install termcolor
-```
-```
-pip install pyfiglet
-```
 After that you should be good to go.
 
 ## Usage
